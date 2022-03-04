@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="loader">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+</div>
+
+<div class="body-container container-fluid">
+    <a class="menu-btn" href="javascript:void(0)">
+        <i class="ion ion-grid"></i>
+    </a>
+    <div class="row justify-content-center">
+        <!--=================== side menu ====================-->
+        <div class="col-lg-2 col-md-3 col-12 menu_block">
+
+            <!--logo -->
+            <div class="logo_box">
+                <a href="/">
+                    <img src="https://fontmeme.com/permalink/220209/1a8df5a903ce744e9f094f13c9cd39dd.png" alt="Shiraa">
+                    <img src="https://fontmeme.com/permalink/220209/46b5125ae32f01e431316c4ab126984b.png" alt="Shiraa">
+                </a>
+            </div>
+            <!--logo end-->
+
+            <!--main menu -->
+            <div class="side_menu_section">
+                <ul class="menu_nav">
+                    <li>
+                        <a href="/">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about' %}">
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'services' %}">
+                            Competencies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'portfolio' %}">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'blog' %}">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="{% url 'contact' %}">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--main menu end -->
+
+            <!--filter menu -->
+            <div class="side_menu_section">
+                <h4 class="side_title">filter portfolio by:</h4>
+                <ul id="filtr-container" class="filter_nav">
+                    <li data-filter="*" class="active"><a href="javascript:void(0)">all</a></li>
+                    <li data-filter=".branding"> <a href="javascript:void(0)"> design</a></li>
+                    <li data-filter=".design"><a href="javascript:void(0)">xlister design</a></li>
+                    <li data-filter=".photography"><a href="javascript:void(0)">galleries</a></li>
+                    <li data-filter=".architecture"><a href="javascript:void(0)">housing & Storage</a></li>
+                </ul>
+            </div>
+            <!--filter menu end -->
+
+
+            <!--social and copyright -->
+            <div class="side_menu_bottom">
+                <div class="side_menu_bottom_inner">
+                    <ul class="social_menu">
+                        <li>
+                            <a href="#"> <i class="ion ion-social-pinterest"></i> </a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="ion ion-social-facebook"></i> </a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="ion ion-social-twitter"></i> </a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="ion ion-social-dribbble"></i> </a>
+                        </li>
+                    </ul>
+                    <div class="copy_right">
+                        <p class="copyright">Copyright &copy;<script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved <i class="fa fa-terminal"
+                                aria-hidden="true"></i> by <a href="https://vickieshiraa.com" target="_blank">VickieShiraa</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--social and copyright end -->
+
+        </div>
+        <!--=================== side menu end====================-->
+
+        <!--=================== content body ====================-->
+        <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
+            <div>
+                <div class="img_card">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-7 content_section">
+                            <!--=================== contact info and form start====================-->
+                            <div class="content_box">
+                                <div class="content_box_inner">
+                                    <div>
+                                        <h3>
+                                            Lets Talk
+                                        </h3>
+                                        <p>
+                                            Want to get in touch? I'd love to hear from you. <br>
+                                            Here's how you can reach me...
+                                        </p>
+
+                                        <ul class="nosyely_list pt50">
+                                            <li>
+                                                <div class="img_box_two">
+                                                    <img src="/static/img/icons/satelite.png" alt="info list">
+                                                    <div class="content align-items-center">
+                                                        <p>
+                                                            Juja Road, No 001<br />
+                                                            Nairobi, KE
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img_box_two">
+                                                    <img src="/static/img/icons/scheme.png" alt="info list">
+                                                    <div class="content align-items-center">
+                                                        <p>
+                                                            <a href="mailto:desastrecaliente@gmail.com">desastrecaliente@gmail.com</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img_box_two">
+                                                    <img src="/static/img/icons/smartphone.png" alt="info list">
+                                                    <div class="content align-items-center">
+                                                        <p>
+                                                            <a href="tel:+254717927168">+254 717 927 168</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                    <form action="mailto:desastrecaliente@gmail.com" method="post">
+                                        <div class="mt75 row justify-content-center">
+                                            <div class="col-lg-6 col-12">
+                                                <input type="text" placeholder="Name" required class="form-control">
+                                            </div>
+                                            <div class="col-lg-6 col-12">
+                                                <input type="email" placeholder="E-Mail" required class="form-control">
+                                            </div>
+                                            <div class="col-12">
+                                                <input type="text" placeholder="Subject" required class="form-control">
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea placeholder="Message" required class="form-control" cols="4"
+                                                    rows="4"></textarea>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary">Send</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--=================== contact info and form end====================-->
+                        </div>
+                        <div class="col-md-6 col-5 img_section" style="background-color:rgb(255, 255, 255);">
+                            <!--map -->
+                            <!-- <div id="map" data-lon="24.036176" data-lat=" 57.039986" class="map"></div> -->
+                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  style="border:0; margin-top: -55px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6708.407890128954!2d36.835016280789944!3d-1.2667758410494363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f16c39c0f766b%3A0xc78c8da617084376!2sPangani%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1646301141856!5m2!1sen!2ske" width="915" height="1185" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <!-- <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  style="border:0; margin-top: -150px;"  src="https://maps.google.com/maps?f=l&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Walt+Disney+World+Resort&amp;aq=t&amp;sll=28.38545007745952, -81.56377744291994&amp;ie=UTF8&amp;ll=28.38545007745952, -81.56377744291994&amp;z=17&amp;om=0&amp;iwloc=addr&amp;iwd=0&amp;layer=0&amp;output=embed"></iframe> -->
+                            <!--map end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--=================== content body end ====================-->
+    </div>
+</div>
+
+{% endblock %}

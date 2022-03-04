@@ -1,0 +1,304 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="loader">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+</div>
+
+<div class="body-container container-fluid">
+    <a class="menu-btn" href="javascript:void(0)">
+        <i class="ion ion-grid"></i>
+    </a>
+    <div class="row justify-content-center">
+        <!--=================== side menu ====================-->
+        <div class="col-lg-2 col-md-3 col-12 menu_block">
+
+            <!--logo -->
+            <div class="logo_box">
+                <a href="/">
+                    <img src="https://fontmeme.com/permalink/220209/1a8df5a903ce744e9f094f13c9cd39dd.png" alt="Shiraa">
+                    <img src="https://fontmeme.com/permalink/220209/46b5125ae32f01e431316c4ab126984b.png" alt="Shiraa">
+                </a>
+            </div>
+            <!--logo end-->
+
+            <!--main menu -->
+            <div class="side_menu_section">
+                <ul class="menu_nav">
+                    <li>
+                        <a href="/">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about' %}">
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'services' %}">
+                            Competencies
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="{% url 'portfolio' %}">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'blog' %}">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--main menu end -->
+
+            <!--filter menu -->
+            <div class="side_menu_section">
+                <h4 class="side_title">filter portfolio by:</h4>
+                <ul id="filtr-container" class="filter_nav">
+                    <li data-filter="*" class="active"><a href="javascript:void(0)">all</a></li>
+                    <li data-filter=".branding"> <a href="javascript:void(0)"> design</a></li>
+                    <li data-filter=".design"><a href="javascript:void(0)">xlister design</a></li>
+                    <li data-filter=".photography"><a href="javascript:void(0)">galleries</a></li>
+                    <li data-filter=".architecture"><a href="javascript:void(0)">housing & Storage</a></li>
+                </ul>
+            </div>
+            <!--filter menu end -->
+
+
+            <!--social and copyright -->
+            <div class="side_menu_bottom">
+                <div class="side_menu_bottom_inner">
+                    <ul class="social_menu">
+                        <li>
+                            <a href="#"> <i class="ion ion-social-pinterest"></i> </a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="ion ion-social-facebook"></i> </a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="ion ion-social-twitter"></i> </a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="ion ion-social-dribbble"></i> </a>
+                        </li>
+                    </ul>
+                    <div class="copy_right">
+                        <p class="copyright">Copyright &copy;<script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved <i class="fa fa-terminal"
+                                aria-hidden="true"></i> by <a href="https://vickieshiraa.com" target="_blank">VickieShiraa</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--social and copyright end -->
+
+        </div>
+        <!--=================== side menu end====================-->
+
+        <!--=================== content body ====================-->
+        <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
+            <!--=================== filter portfolio start====================-->
+            <div class="portfolio design gutters grid img-container">
+                <div class="grid-sizer col-sm-12 col-md-6 col-lg-3"></div>
+                <div class="grid-item branding  col-sm-12 col-md-6 col-lg-3">
+                    <a href="/static/img/portfolio/mat.png" title="Matatu App">
+                        <div class="project_box_one">
+                            <img src="/static/img/portfolio/mat_ccexpress_ccexpress.png" alt="pro1" />
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>Matatu App</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item  design photography   col-md-9 protokol"  >
+                    <a href="/static/img/portfolio/gh.png" title="Gallery App">
+                        <div class="project_box_one">
+                            <video class="protokol" height="764" src="/static/img/portfolio/video/a.mp4" autoplay muted loop >
+                        <div class="fallback">
+                            <p>................</p>
+                        </div>
+                    </video>
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>Gallery App</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item   col-sm-12 col-md-6 col-lg-3">
+                    <a href="/static/img/portfolio/cc.png" title="News App">
+                        <div class="project_box_one">
+                            <img src="/static/img/portfolio/pandora23.png" alt="pro1" />
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>News App</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item  architecture col-sm-12 col-md-6 col-lg-3">
+                    <a href="/static/img/portfolio/rime.png" title="Security Site">
+                        <div class="project_box_one">
+                            <img src="/static/img/portfolio/rimeva2.png" alt="pro1" />
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>Rimeva Security</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item  branding photography  col-sm-12 col-md-6 col-lg-3">
+                    <a href="/static/img/portfolio/ccg.png" title="Instagram Recreation">
+                        <div class="project_box_one">
+                            <img src="/static/img/portfolio/try3.png" alt="pro1" />
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>Instagram Recreation</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item  architecture design col-sm-12 col-md-6 col-lg-3">
+                    <a href="/static/img/portfolio/hood2.png" title="Community App">
+                        <div class="project_box_one">
+                            <img src="/static/img/portfolio/hood.png" alt="pro1" />
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>Community App</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item col-sm-12 col-md-6 col-lg-3">
+                    <a href="/static/img/portfolio/ccp.png" title="Pitching App">
+                        <div class="project_box_one">
+                            <img src="/static/img/portfolio/pitch2.png" alt="pro1" />
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>Pitching App</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item  branding design  col-sm-12 col-md-6 col-lg-3">
+                    <a href="/static/img/portfolio/store.png" title="Warehousing App">
+                        <div class="project_box_one">
+                            <img src="/static/img/portfolio/store_ccexpress.png" alt="pro1" />
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>Warehousing App</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="grid-item design photography col-md-6 ">
+                    <a href="/static/img/portfolio/marcel.png" title="Awwwards Recreation">
+                        <div class="project_box_one">
+                            <img src="/static/img/portfolio/marcel.png" alt="pro1" />
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>Awwwards Recreation</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item architecture col-md-6 ">
+                    <a href="/static/img/portfolio/red_ccexpress.png" title="Blogging App">
+                        <div class="project_box_one">
+                            <img src="/static/img/portfolio/red_ccexpress.png" alt="pro1" />
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>Blogging App</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="grid-item  branding design  col-sm-12 col-md-6 col-lg-3">
+                    <a href="/static/img/portfolio/port11.png" title="project name 5">
+                        <div class="project_box_one">
+                            <img src="/static/img/portfolio/port11.png" alt="pro1" />
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>project name</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item architecture  col-sm-12 col-md-6 col-lg-3">
+                    <a href="/static/img/portfolio/port4.png" title="project name 4">
+                        <div class="project_box_one">
+                            <img src="/static/img/portfolio/port4.png" alt="pro1" />
+                            <div class="product_info">
+                                <div class="product_info_text">
+                                    <div class="product_info_text_inner">
+                                        <i class="ion ion-plus"></i>
+                                        <h4>project name</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div> -->
+            </div>
+            <!--=================== filter portfolio end====================-->
+        </div>
+        <!--=================== content body end ====================-->
+    </div>
+</div>
+{% endblock %}
