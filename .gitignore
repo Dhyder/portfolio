@@ -108,7 +108,7 @@ virtual
 env/
 venv/
 original/
-faux/
+# faux/
 folio/
 ENV/
 env.bak/
