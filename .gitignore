@@ -115,7 +115,6 @@ env.bak/
 venv.bak/
 start.sh
 migrate.sh
-migrations.sh
 su.sh
 m.sh
 
